@@ -13,7 +13,7 @@ with open('proxyrotator.csv', 'r') as f:
 def extract(proxy):
     try:
         r = requests.get('https://httpbin.org/ip', proxies={'http': proxy, 'https': proxy}, timeout=2)
-        print(r.json(), ' - working')
+        print(r, ' - working')
     except:
         pass
         return proxy
